@@ -21,7 +21,7 @@ The technical requirements for this project are as follows:
 * The following data pipeline stages should be covered: acquisition, wrangling, analysis, and reporting.
 * You must demonstrate all the topics we covered in the chapter (functions, list comprehensions, string operations, etc) in your processing of the data.
 * There should be some data set that gets imported and some result that gets exported.
-* Your code should be saved in a Python executable file (.py), your data should be saved in a folder named data, and your results should be saved in a folder named output.
+* Your code should be saved in a Python executable file (.py), your data should be saved in a folder named data or src, and your results should be saved in a folder named output.
 * You should also include a README.md file that describes the steps you took and your thought process as you built your data pipeline.
 
 ## TO DO's
@@ -35,7 +35,10 @@ The technical requirements for this project are as follows:
     - _Note:_ The API you use may require authentication via token or oAuth.
   - Do web scraping with python `beautifulsoup` module.
   
-- D) The data you bring in to enrich the dataset must be related to it and complement it! Figure out how it fits together and how you prepare the data of both sources for your report.
+- D) The data you bring in to enrich the dataset must be related to it and complement it! Figure out how it fits together and how you prepare the data of both sources for your report. Some suggestions on how you could achieve this:
+  - You have a dataset. Now you can use an API using the data of a column and create a new one with valuable info of your response for each row.
+  - Scrapping a website and creating a new dataset. Then linking both datasets somehow. Maybe in the visualization.
+  - Merging two datasets is complicated: you would need at least the same column with the same data in both. Don't overthink this stage. You can establish the relationship of both sources of data through visualization. 
   
 - E) Create some reports containing valuable data from the dataset + enrichment. Some of the things you may do are:
   - Simply sumarize the data and do some basic statistics \(`mean`, `max`, `min`, `std`, etc.).
@@ -43,7 +46,7 @@ The technical requirements for this project are as follows:
   - **LOTS AND LOTS** of plots, of all types and colors.
   - Go nuts with the investigation. 
 
-- F) The finished report must be a **very pretty** jupyter notebook, with text, clean code, meaningful outputs, plots and charts. Try telling a story with your data, that is, conduct us (the readers) through your findings and lead us into your conclusions.
+- F) The finished **report** must be a **very pretty** jupyter notebook, with text, clean code, meaningful outputs, plots and charts. Try telling a story with your data, that is, conduct us (the readers) through your findings and lead us into your conclusions.
   - _Note:_ The report jupyter **must** be separate from the code for cleaning, acquiring, processing data, etc. These may be in other jupyters or in `.py` modules. _Be not afraid to modulate 🎶_
 
 ## Summing up
@@ -70,7 +73,7 @@ You should be able to run:
 ```bash
 python3 cleaning.py
 ```
-on your terminal so that it'll prompt you to enter a dataset to download. Then the code within your file will download it, clean it and export it.
+on your terminal so that it'll prompt you to enter a dataset to download. Then the code within your file will **download** it, **clean** it and **export** it.
 
 After that's done, the rest of your code: enrichment and visualization can be told on jupyter notebooks.
 
@@ -90,6 +93,8 @@ However, even though the executable file will only be the `cleaning.py`, that do
 ```
 
 ## Super Ultra Mega Blaster Tips
+
+* **Choose the data sources ASAP** and try to **stick to the plan**. Don't switch datasets/API's/webs halfway. 
 
 * **Examine the data**.
 
